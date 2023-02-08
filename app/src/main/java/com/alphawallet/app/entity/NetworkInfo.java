@@ -5,6 +5,7 @@ import android.net.Uri;
 import androidx.annotation.Nullable;
 
 import static com.alphawallet.app.repository.EthereumNetworkBase.COVALENT;
+import static com.alphawallet.ethereum.EthereumNetworkBase.OKX_ID;
 
 import com.alphawallet.app.repository.EthereumNetworkRepository;
 import com.alphawallet.app.util.Utils;
@@ -55,7 +56,7 @@ public class NetworkInfo extends com.alphawallet.ethereum.NetworkInfo {
     public boolean usesSeparateNFTTransferQuery()
     {
         return (etherscanAPI != null && !etherscanAPI.contains(BLOCKSCOUT_API)
-                && !etherscanAPI.contains(COVALENT) && !etherscanAPI.contains(PALM_API));
+                && !etherscanAPI.contains(COVALENT) && !etherscanAPI.contains(PALM_API) && chainId == OKX_ID);
     }
 
     @Nullable
