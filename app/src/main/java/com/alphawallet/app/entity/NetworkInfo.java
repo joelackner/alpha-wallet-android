@@ -56,7 +56,7 @@ public class NetworkInfo extends com.alphawallet.ethereum.NetworkInfo {
     public boolean usesSeparateNFTTransferQuery()
     {
         return (etherscanAPI != null && !etherscanAPI.contains(BLOCKSCOUT_API)
-                && !etherscanAPI.contains(COVALENT) && !etherscanAPI.contains(PALM_API) && chainId == OKX_ID);
+                && !etherscanAPI.contains(COVALENT) && !etherscanAPI.contains(PALM_API));
     }
 
     @Nullable
